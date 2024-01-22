@@ -1,0 +1,23 @@
+---
+import Container from "../../layouts/Container.astro"
+
+// COMMON COMPONENTS
+import Button from "../common/Button.astro"
+import Link from "../common/Link.astro"
+---
+<Container>
+    <section class="flex justify-center py-20 flex-col gap-4">
+        <div class="w-full aspect-square">
+            <img
+                src="/images/madebyshape-web-design-enquiry_2020-10-05.webp"
+                class="w-full h-full object-contain"
+            />
+        </div>
+        <h2 class="font-circular font-medium text-3xl">Let's make something great together.</h1>
+        <p class="font-circular text-base">Whether it's a new venture or existing brand.</p>
+        <div class="flex gap-4 items-center">
+            <Button>Start a Project</Button>
+            <Link>Get in touch</Link>
+        </div>
+    </section>
+</Container>
