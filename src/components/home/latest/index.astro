@@ -2,28 +2,26 @@
 import Container from "../../../layouts/Container.astro"
 import { Icon } from "astro-icon/components"
 ---
-<section class="bg-black p-2">
-    <Container>
-        <section class="mt-8">
-            <h2 class="font-circular font-bold text-xl text-white">Latest from our web design studio</h2>
-            <div class="mt-8 flex gap-4 snap-x snap-mandatory scroll-smooth overflow-x-auto">
-                {
+<section class="bg-black">
+    <section class="mt-8 py-8 ml-8">
+        <h2 class="font-circular font-bold text-xl text-white">Latest from our web design studio</h2>
+        <div class="mt-8 flex gap-4 snap-x snap-mandatory scroll-smooth overflow-x-auto">
+            {
 
-                    Array(4).fill(0).map( ( value ) => {
+                Array(4).fill(0).map( ( value ) => {
 
-                        return (
-                            <div class="grid gap-2 snap-start">
-                                <div class="bg-zinc-200 aspect-[3/4] w-[300px]"/>
-                                <div class="font-circular font-bold text-lg text-white">Our Culture, Our Value & Our Studio</div>
-                            </div>
-                        )
+                    return (
+                        <div class="grid gap-2 snap-start">
+                            <div class="bg-zinc-200 aspect-[3/4] w-[300px]"/>
+                            <div class="font-circular font-bold text-lg text-white">Our Culture, Our Value & Our Studio</div>
+                        </div>
+                    )
 
-                    })
+                })
 
-                }
-            </div>
-        </section>
-    </Container>
+            }
+        </div>
+    </section>
 </section>
 <div class="w-full overflow-hidden">
     <Icon name="wave" class="w-full fill-current h-full scale-105" />
