@@ -3,6 +3,7 @@ import Container from "../../layouts/Container.astro"
 import Link from "../common/Link.astro"
 ---
 <Container>
+    <div class="grid gap-8">
     {
 
         Array(4).fill("1").map( ( value ) => {
@@ -18,6 +19,7 @@ import Link from "../common/Link.astro"
         })
 
     }
+    </div>
     <Link>
         <span>View Brand + Website Portfolio</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
