@@ -1,16 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 
-import Hero from "../components/home/Hero.astro"
-import Portfolio from "../components/home/Portfolio.astro"
-import StartAProject from "../components/home/StartAProject.astro"
-import Latest from "../components/home/latest/index.astro"
-import Video from "../components/home/video/index.astro"
-import About from "../components/home/about/index.astro"
-import InstagramFeed from "../components/home/instagram-feed/index.astro"
-import Footer from "../components/common/footer/index.astro"
-import Expertise from "../components/home/expertise/index.astro"
-
+import Home from "@/components/home/index.astro"
 ---
 
 <Layout
@@ -18,20 +9,5 @@ import Expertise from "../components/home/expertise/index.astro"
     description={ "" }
     image={ "" }
 >
-	<!-- HERO -->
-	<Hero />
-
-	<Video />
-
-	<About />
-	<!-- PORTFOLIO -->
-	<Portfolio />
-
-	<Expertise />
-	<Latest />
-	<!-- START A PROJECT -->
-	<StartAProject />
-
-	<InstagramFeed />
-	<Footer />
+	<Home />
 </Layout>
