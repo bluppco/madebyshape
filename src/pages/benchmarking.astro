@@ -1,0 +1,28 @@
+---
+// IMPORTS BENCHMARKING FROM MD
+import { frontmatter as benchmarking } from "@/content/benchmarking/home.mdx"
+
+// IMPORT LAYOUTS
+import Layout from "@/layouts/Layout.astro"
+import Container from "@/layouts/Container.astro"
+
+// IMPORT COMPONENTS
+import Footer from "@/components/common/footer/index.astro"
+import Header from "@/components/common/header/index.astro"
+import HeaderBanner from "@/components/common/header-banner/index.astro"
+import BenchmarkingJSX from "@/components/benchmarking"
+---
+<Layout
+	title={ "Benchmarking" }
+	description={ "Benchmarking" }
+	image=""
+>
+    <HeaderBanner />
+    <Header />
+    <section class="py-40">
+        <Container>
+            <BenchmarkingJSX client:load data={ benchmarking }/>
+        </Container>
+    </section>
+    <Footer />
+</Layout>

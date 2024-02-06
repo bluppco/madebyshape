@@ -1,16 +1,43 @@
-import { defineConfig } from 'astro/config';
-import mdx from "@astrojs/mdx";
-import cloudflare from "@astrojs/cloudflare";
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
+import cloudflare from "@astrojs/cloudflare";
+import mdx from "@astrojs/mdx";
 
 import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), tailwind({
-    applyBaseStyles: false
-  }), react(), icon()],
-  output: "server",
-  adapter: cloudflare()
+	integrations: [
+
+		tailwind({
+
+			applyBaseStyles: false,
+
+		}),
+		react(),
+		icon(),
+		mdx(),
+
+	],
+	output: "server",
+	adapter: cloudflare({
+
+		runtime: {
+
+			mode: "local",
+			type: "pages",
+		}
+
+	}),
+	image: {
+
+		service: {
+
+		  	entrypoint: 'astro/assets/services/noop'
+
+		}
+
+	}
+
 });

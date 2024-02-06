@@ -1,0 +1,20 @@
+---
+// IMPORTS ASTRO ATOMS
+import Button from "@/atoms/button/primary/index.astro"
+
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/Container.astro"
+---
+<section class="grow h-full w-full py-20 md:pt-32 flex flex-col justify-center items-center">
+    <Container>
+        <div class="space-y-10">
+            <p class="text-3xl md:text-7xl uppercase font-proxima_nova_condensed text-center tracking-wider">404 - Page not found</p>
+            <div class="md:w-[70%] mx-auto">
+                <p class="text-lg md:text-xl text-center font-proxima_nova_condensed tracking-wide">Looks like you've ventured into uncharted territory. Don't worry; even the best explorers take a wrong turn now and then. Let's get you back on track.</p>
+            </div>
+            <div class="flex justify-center">
+                <Button href="/">Go to home page</Button>
+            </div>
+        </div>
+    </Container>
+</section>
